@@ -174,7 +174,7 @@ abstract contract V4Router is IV4Router, BaseActionsRouter, DeltaResolver {
     }
 
     function _swap(PoolKey memory poolKey, bool zeroForOne, int256 amountSpecified, bytes calldata hookData)
-        private
+        internal
         returns (int128 reciprocalAmount)
     {
         // for protection of exactOut swaps, sqrtPriceLimit is not exposed as a feature in this contract
